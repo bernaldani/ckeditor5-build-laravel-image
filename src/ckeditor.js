@@ -26,6 +26,7 @@ import ImageStyle from '@ckeditor/ckeditor5-image/src/imagestyle';
 import ImageToolbar from '@ckeditor/ckeditor5-image/src/imagetoolbar';
 import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload';
 import MediaEmbed from '@ckeditor/ckeditor5-media-embed/src/mediaembed';
+import Font from '@ckeditor/ckeditor5-font/src/font';
 
 import SimpleUpload from 'ckeditor5-simple-upload/src/simpleupload';
 
@@ -58,6 +59,7 @@ ClassicEditor.builtinPlugins = [
   ImageToolbar,
   ImageUpload,
   MediaEmbed,
+  Font,
   SimpleUpload,
 ];
 
@@ -69,6 +71,7 @@ ClassicEditor.defaultConfig = {
       '|',
       'heading',
       '|',
+      'fontColor',
       'bold',
       'italic',
       'underline',
@@ -124,5 +127,32 @@ ClassicEditor.defaultConfig = {
         'accept': 'application/json'
       }
     }
-  }
+  },
+  fontColor: {
+      colors: [
+          {
+              color: 'hsl(0, 0%, 0%)',
+              label: 'Black'
+          },
+          {
+              color: 'hsl(0, 0%, 30%)',
+              label: 'Dim grey'
+          },
+          {
+              color: 'hsl(0, 0%, 60%)',
+              label: 'Grey'
+          },
+          {
+              color: 'hsl(0, 0%, 90%)',
+              label: 'Light grey'
+          },
+          {
+              color: 'hsl(0, 0%, 100%)',
+              label: 'White',
+              hasBorder: true
+          },
+
+          // ...
+      ]
+  },
 };
